@@ -1,0 +1,17 @@
+{
+  "name": "react_in_node",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "dhilipanraja-joseph <dlipnraj@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/dhilipanraja-joseph",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
