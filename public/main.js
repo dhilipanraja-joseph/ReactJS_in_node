@@ -33,9 +33,9 @@ const AssignmentForm = React.createClass({
        <form>
          <input type="text" value={this.state.name} onChange={e=> this.setState({name : e.target.value})} placeholder="Assignment"/><br/>
          <input type="number" value={this.state.points} onChange={e=> this.setState({points : e.target.value})} placeholder="Points"/><br/>
-         <input type="number" value={this.state.score} onChange={e=> this.setState({score : e.target.value})} placeholder="Score"/><br/>
-         <button onClick={this.addAssignment}>Add</button>
-         <button onClick={this.resetForm}>Reset</button>
+         <input type="number" value={this.state.score} onChange={e=> this.setState({score : e.target.value})} placeholder="Score"/><br/><br/>
+         <button className="btn-default btn" onClick={this.addAssignment}>Add</button>
+         <button className="btn-default btn" onClick={this.resetForm}>Reset</button>
        </form>
      );
   }
@@ -119,20 +119,21 @@ const AssignmentsTable = React.createClass({
           <td>{assignment.score}</td>
           <td>{assignment.grade}</td>
           <td>
-            <button onClick={this.delete} value={assignment.id}>-</button>
-            <button onClick={this.modify} value={assignment.id}>?</button>
+            <button className="btn btn-xs btn-danger" onClick={this.delete} value={assignment.id}>Delete</button>
+            <button className="btn btn-xs btn-default" onClick={this.modify} value={assignment.id}>Modify</button>
           </td>
         </tr>
       );
     });
     return (
-      <table>
+      <table className="table">
         <thead>
           <tr>
             <th>Assignments</th>
             <th>Points</th>
             <th>Score</th>
             <th>Grade</th>
+            <th>Edit</th>
           </tr>
         </thead>
           <tbody>
