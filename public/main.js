@@ -109,7 +109,11 @@ const Assignments = React.createClass({
 
 const AssignmentsTable = React.createClass({
   delete : function(e){
-    this.props.deleteAssign(e.target.value);
+    if(confirm("Are you Sure ?")=== true){
+      this.props.deleteAssign(e.target.value);
+    }else{
+      return;
+    }
   },
   modify : function(e){
 
