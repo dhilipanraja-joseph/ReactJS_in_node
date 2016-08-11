@@ -2,7 +2,7 @@ const Root = React.createClass({
   render : function(){
     return (
       <div>
-      <h1>Assignments Records</h1>
+      <h1>Assignment Records</h1>
       <Assignments/>
       </div>
     );
