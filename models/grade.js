@@ -135,7 +135,7 @@ function addGrades(assignments){
     // console.log(p);
     if(p<50){
       assignment.grade = 'F';return assignment.grade;
-    }else if(p>50 && p<60){
+    }else if(p>=50 && p<60){
       assignment.grade = 'E';return assignment.grade;
     }else if(p>=60 && p<70){
       assignment.grade = 'D';return assignment.grade;
