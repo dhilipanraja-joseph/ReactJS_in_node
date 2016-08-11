@@ -22,7 +22,7 @@ const AssignmentForm = React.createClass({
     e.preventDefault();
     let assignObj = {name : this.state.name,points : this.state.points,score : this.state.score };
     this.props.addAssign(assignObj);
-
+    this.setState({name : '',points : '',score : ''});
   },
   resetForm : function(e){
     e.preventDefault();
