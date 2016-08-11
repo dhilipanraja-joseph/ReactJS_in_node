@@ -118,7 +118,7 @@ const AssignmentsTable = React.createClass({
           <td>{assignment.points}</td>
           <td>{assignment.score}</td>
           <td>{assignment.grade}</td>
-          <td>
+          <td className="text-center">
             <button className="btn btn-xs btn-danger" onClick={this.delete} value={assignment.id}>Delete</button>
             <button className="btn btn-xs btn-default" onClick={this.modify} value={assignment.id}>Modify</button>
           </td>
@@ -133,7 +133,7 @@ const AssignmentsTable = React.createClass({
             <th>Points</th>
             <th>Score</th>
             <th>Grade</th>
-            <th>Edit</th>
+            <th className="text-center">Edit</th>
           </tr>
         </thead>
           <tbody>
