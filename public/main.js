@@ -2,7 +2,7 @@ const Root = React.createClass({
   render : function(){
     return (
       <div>
-      <h1>Assignments</h1>
+      <h1>Assignments Records</h1>
       <Assignments/>
       </div>
     );
@@ -30,10 +30,10 @@ const AssignmentForm = React.createClass({
   },
   render : function(){
      return (
-       <form>
-         <input type="text" value={this.state.name} onChange={e=> this.setState({name : e.target.value})} placeholder="Assignment"/><br/>
-         <input type="number" value={this.state.points} onChange={e=> this.setState({points : e.target.value})} placeholder="Points"/><br/>
-         <input type="number" value={this.state.score} onChange={e=> this.setState({score : e.target.value})} placeholder="Score"/><br/><br/>
+       <form className="formOne">
+         <input className="form-control" type="text" value={this.state.name} onChange={e=> this.setState({name : e.target.value})} placeholder="Assignment"/><br/>
+         <input className="form-control" type="number" value={this.state.points} onChange={e=> this.setState({points : e.target.value})} placeholder="Points"/><br/>
+         <input className="form-control" type="number" value={this.state.score} onChange={e=> this.setState({score : e.target.value})} placeholder="Score"/><br/>
          <button className="btn-default btn" onClick={this.addAssignment}>Add</button>
          <button className="btn-default btn" onClick={this.resetForm}>Reset</button>
        </form>
@@ -80,8 +80,8 @@ const Assignments = React.createClass({
     let i = this.state.data.findIndex(x => x.id ===id);
     let mAssign = this.state.data;
     let name = prompt("Change Assignment",mAssign[i].name);
-    let points = prompt("Change State",mAssign[i].points);
-    let score = prompt("Change Population",mAssign[i].score);
+    let points = prompt("Change Points",mAssign[i].points);
+    let score = prompt("Change Score",mAssign[i].score);
     let data = {name,points,score};
     $.ajax({
       type : "PUT",
@@ -126,7 +126,7 @@ const AssignmentsTable = React.createClass({
       );
     });
     return (
-      <table className="table">
+      <table className="table table-bordered table-striped">
         <thead>
           <tr>
             <th>Assignments</th>
