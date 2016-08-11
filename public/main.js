@@ -126,7 +126,7 @@ const AssignmentsTable = React.createClass({
       );
     });
     return (
-      <table className="table table-bordered table-striped">
+      <table className="table table-bordered">
         <thead>
           <tr>
             <th>Assignments</th>
