@@ -133,18 +133,18 @@ function addGrades(assignments){
   var graded = assignments.map(assignment=>{
     var p = Math.floor(assignment.score/assignment.points*100),grade;
     // console.log(p);
-    if(p===50){
-      assignment.grade = 'E';return assignment.grade;
+    if(p<50){
+      assignment.grade = 'F';return assignment.grade;
     }else if(p>50 && p<60){
-      assignment.grade = 'D';return assignment.grade;
+      assignment.grade = 'E';return assignment.grade;
     }else if(p>=60 && p<70){
-      assignment.grade = 'C';return assignment.grade;
+      assignment.grade = 'D';return assignment.grade;
     }else if(p>=70 && p<80){
-      assignment.grade = 'B';return assignment.grade;
+      assignment.grade = 'C';return assignment.grade;
     }else if(p>=80 && p<90){
-      assignment.grade = 'A';return assignment.grade;
+      assignment.grade = 'B';return assignment.grade;
     }else if(p>=90){
-      assignment.grade = 'S';return assignment.grade;
+      assignment.grade = 'A';return assignment.grade;
     }
 
   });
