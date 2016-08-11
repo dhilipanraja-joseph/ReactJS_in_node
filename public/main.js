@@ -82,7 +82,12 @@ const Assignments = React.createClass({
     let name = prompt("Change Assignment",mAssign[i].name);
     let points = prompt("Change Points",mAssign[i].points);
     let score = prompt("Change Score",mAssign[i].score);
-    let data = {name,points,score};
+    if(!name||!points||!score){
+      return;
+    }else{
+      let data = {name,points,score};
+
+    }
     $.ajax({
       type : "PUT",
       url : `/grades/${id}`,
